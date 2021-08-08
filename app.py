@@ -36,6 +36,8 @@ def get_options(fea_list):
 
 app = dash.Dash(__name__)
 
+server = app.server
+
 app.layout = html.Div(
     children=[
         html.H1(children="Proactive Quality Prediction System",),
@@ -119,4 +121,5 @@ def update_graph(selected_dropdown_value):
     return figure
 
 if __name__ == "__main__":
-    app.run_server(debug=True, port=8000, host='0.0.0.0')
+    app.run_server(debug=True)
+    # app.run_server(debug=True, port=8000, host='0.0.0.0')

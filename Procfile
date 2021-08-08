@@ -1,1 +1,1 @@
-web: gunicorn DashApp:app
+web: gunicorn app:server
